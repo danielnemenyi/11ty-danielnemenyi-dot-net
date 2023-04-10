@@ -1,28 +1,120 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Home
-  order: 1
-numberOfLatestPostsToShow: 3
+key: Home
+order: 1
+numberOfLatestPostsToShow: 20
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
+<p>Hello, and welcome to my homepage.</p>
+
+<p>My academic writing tends to
+involve conceptual histories of self-regulating systems. My doctoral
+thesis, <em>What is an internet? Norbert Wiener and the society of
+control</em> (2019), was completed at the <a target="_blank"
+rel="noopener"
+href="https://www.kingston.ac.uk/faculties/kingston-school-of-art/research-and-innovation/crmep/">Centre
+for Research in Modern European Philosophy (CRMEP)</a>, Kingston
+University, under the supervision of Prof. Howard Caygill, as was my
+MA in Modern European Philosophy. I am a member of the editorial
+collective of <a target="_blank" rel="noopener"
+href="https://www.radicalphilosophy.com/">Radical Philosophy</a> and a
+visiting fellow at the <a target="_blank" rel="noopener"
+href="https://www.kcl.ac.uk/people/daniel-nemenyi">Department of
+Digital Humanities, KCL</a>. I enjoy writing about and in code,
+especially in LaTeX, Emacs Lisp and Python. I'm sporadically active on
+<a target="_blank" rel="noopener"
+href="https://gitlab.com/klinamen0">Gitlab</a>, <a target="_blank"
+rel="noopener" href="https://github.com/danielnemenyi">GitHub</a> and
+<a target="_blank" rel="noopener"
+href="https://twitter.com/DanielNemenyi">Twitter</a>. </p>
+
+
+{% set postsCount = collections.posts | length %} {% set
+latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+
+<h2>Blog posts</h2>
+
+{% set postslist = collections.posts | head(-1 *
+numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount %}
 {% include "postslist.njk" %}
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+{% set morePosts = postsCount - numberOfLatestPostsToShow %} {% if
+morePosts > 0 %} <p>{{ morePosts }} more post{% if morePosts != 1
+%}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
 {% endif %}
 
-{# List every content page in the project #}
-{#
+<h2>Publications and academic writing</h2>
+
 <ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
+    <li>
+	Daniel Nemenyi, 'Robot Makes Free: The Leibnizian cryptowar of
+	Norbert Wiener', <em>Radical Philosophy</em> 2.14, Spring
+	2023, 3–20. (<a href="https://www.radicalphilosophy.com/article/robot-makes-free">Radical Philosophy</a>)
+    </li>
+    <li>
+	Daniel Nemenyi, 'How we never became posthuman: Homeostasis as conflict
+	from Claude Bernard to Norbert Wiener', <em>Distributed
+	Perception</em>, ed. Natasha Lushetich and Iain Campbell (London:
+	Routledge, 2021), 160-173.
+	(<a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003157021-13/never-became-posthuman-daniel-nemenyi?context=ubx&refId=749ec1b3-ec51-4954-84bc-c95c459ad7d4">Taylor & Francis</a>, <a href="https://explore.bl.uk/primo_library/libweb/action/display.do;jsessionid=B31D1A5764ED23EE81F95C3B129CFAB5?tabs=moreTab&ct=display&fn=search&doc=BLL01020380832&indx=2&recIds=BLL01020380832&recIdxs=1&elementId=1&renderMode=poppedOut&displayMode=full&frbrVersion=&vid=BLVU1&dscnt=0&vl(freeText0)=daniel%20nemenyi&dstmp=1681139827783">British Library</a>)
+    </li>
+
+    <li>
+	Daniel Nemenyi, 'Position paper', <em>Terra Critica</em>, (July
+	2019). A reading of Alexandre Koyré's 'The Political Function
+	of the Modern Lie' together with Stuart Hall's 'The Meaning of New
+	Times'.
+	<a href="http://terracritica.net/wp-content/uploads/pospaper_Nemenyi_London2019.pdf">(read)</a>
+    </li>
+
+    <li>Daniel Nemenyi, <em>What is an internet? Norbert
+	Wiener and the society of control</em> February 2019 PhD thesis
+	supervised by Prof. Howard Caygill at CRMEP, Kingston
+	Univeristy.
+	(<a href="https://explore.bl.uk/primo_library/libweb/action/display.do;jsessionid=B31D1A5764ED23EE81F95C3B129CFAB5?tabs=moreTab&ct=display&fn=search&doc=BLL01019629685&indx=1&recIds=BLL01019629685&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=&vid=BLVU1&dscnt=0&vl(freeText0)=daniel%20nemenyi&dstmp=1681139827783">British Library</a>, <a href="https://kingston.primo.exlibrisgroup.com/discovery/fulldisplay?docid=cdi_britishlibrary_ethos_oai_ethos_bl_uk_789360&context=PC&vid=44KU_INST:KU_VU1&lang=en&search_scope=MyInst_and_CI&adaptor=Primo%20Central&tab=ZZZ&query=any,contains,daniel%20nemenyi&offset=0">Kingston University</a>)
+    </li>
+
+    <li>Daniel Nemenyi, Submarine State: On secrets and leaks,
+	<em>Radical Philosophy</em>, 193 (Sept/Oct 2015)</a>, 2-8.
+ 	<a href="https://www.radicalphilosophy.com/commentary/submarine-state">(Radical Philosophy)</a>
+    </li>
+
+    <li>
+	Daniel Nemenyi, 'Rose-tinted lens', <em>Radical Philosophy</em>, 186
+	(Jul/Aug 2014)</a>. Review of <em>Hannah Arendt</em>, dir.
+	Margarethe von Trotta, 60-63.
+	(<a href="https://www.radicalphilosophy.com/reviews/rose-tinted-lens">Radical Philosophy</a>)
+    </li>
+
+    <li>
+	Daniel Nemenyi, <em>The Remnant: A politico-Theological Critique</em> (2012). MA dissertation
+	supervised by Prof. Howard Caygill at CRMEP, Kingston
+	University.
+    </li>
+
 </ul>
-#}
+
+<h2>Projects</h2>
+<ul>
+    <li><a href="https://www.radicalphilosophy.com"><em>Radical Philosophy</em></a>, member of Editorial Collective</li>
+    <li><a href="https://latoupiefolle.org/">La toupie folle : The Pragmatic Genealogy of Concepts</a>, Research Assistant. Built a custom <em><a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a></em> website tool.</li>
+    <li><a href="https://okey.kompyuter.net/">Okey_Kompyuter</a>. Developing Yiddish tech.</li>
+</ul>
+
+<h2>Talks</h2>
+
+ <ul>
+     <li>Daniel Nemenyi, 'Splinternet and globalisation: Two early
+	 models of internet opposed', 4S Annual Meeting (167.
+	 Splinternets), University of Toronto / Online, 6 October
+	 2021. <a href="https://www.4sonline.org/167-splinternets/">(info)</a>
+     </li>
+
+     <li>Daniel Nemenyi, 'The Conflicting Determinations of
+         Norbert Weiner and Leibniz', <em>Indeterminate Futures / The
+         Future of Indeterminacy</em>, University of Dundee, 13 November 2020.
+	 <a href="https://www.youtube.com/watch?v=nlSGbl0nGMw&amp;t=17s">(YouTube)</a> <a href="https://indeterminacy.ac.uk/indeterminate-futures/">(info)</a>
+     </li>
+ </ul>
+
