@@ -6,43 +6,35 @@ order: 1
 numberOfLatestPostsToShow: 20
 ---
 
-<p>Hello, and welcome to my homepage.</p>
+<p><b>Hello, and welcome to my homepage -- a CV and occasional blog. Thanks for dropping by.</b></p>
 
-<p>My academic writing tends to
-involve conceptual histories of self-regulating systems. My doctoral
-thesis, <em>What is an internet? Norbert Wiener and the society of
-control</em> (2019), was completed at the <a target="_blank"
-rel="noopener"
-href="https://www.kingston.ac.uk/faculties/kingston-school-of-art/research-and-innovation/crmep/">Centre
-for Research in Modern European Philosophy (CRMEP)</a>, Kingston
-University, under the supervision of Prof. Howard Caygill, as was my
-MA in Modern European Philosophy. I am a member of the editorial
-collective of <a target="_blank" rel="noopener"
-href="https://www.radicalphilosophy.com/">Radical Philosophy</a> and a
-visiting fellow at the <a target="_blank" rel="noopener"
-href="https://www.kcl.ac.uk/people/daniel-nemenyi">Department of
-Digital Humanities, KCL</a>. I enjoy writing about and in code,
-especially in LaTeX, Emacs Lisp and Python. I'm sporadically active on
-<a target="_blank" rel="noopener"
-href="https://gitlab.com/klinamen0">Gitlab</a>, <a target="_blank"
-rel="noopener" href="https://github.com/danielnemenyi">GitHub</a> and
-<a target="_blank" rel="noopener"
-href="https://twitter.com/DanielNemenyi">Twitter</a>. </p>
+<p>My research focuses on the conceptual histories of self-regulating
+    systems, specifically those of early-cybernetics, with a focus on
+    the theoretical implications for power and control.</p>
+
+<p>Currently, I am a Research Fellow at the Leuphana Institute of Advanced
+    Studies (LIAS) where I am working on the project, <a href="https://www.leuphana.de/en/research-centers/lias/fellows/daniel-nemenyi.html"><em>Kybernetes, or escaping seas and
+    weaving snares in ancient Greek cybernetics</em></a> (2023-2024).</p>
+
+<p>My academic education has
+    been in philosophy, with a BA Philosophy from the University of
+    Sussex, an MA in Modern European Philosophy from the <a target="_blank" rel="noopener" href="https://www.kingston.ac.uk/faculties/kingston-school-of-art/research-and-innovation/crmep/">Centre
+    for Research in Modern European Philosophy (CRMEP)</a>, Kingston
+    University, and a PhD from the same institution. My supervisor for
+    both my MA dissertation and PhD Thesis was Howard Caygill.</p>
+
+<p>I am a member of the editorial collective of the magazine <em><a target="_blank" rel="noopener"						   href="https://www.radicalphilosophy.com/">Radical Philosophy</a></em></p>
+
+<p>Outside of academia I enjoy writing about and in code, especially
+    in LaTeX, Emacs Lisp and Python (<a target="_blank" rel="noopener"
+						href="https://gitlab.com/klinamen0">Gitlab</a>, <a target="_blank"
+												   rel="noopener" href="https://github.com/danielnemenyi">GitHub</a>). </p>
+
+<p>If you're a friend who'd like to borrow my books, have a <a href="https://www.librarycat.org/lib/danielnem/">search</a> or <a href="https://www.librarything.com/catalog/danielnem">browse</a> through the catalogue, and get in touch. Note the Collection for whether the box is with me at Leuphana or in storage at my parents.</p>
 
 
 {% set postsCount = collections.posts | length %} {% set
 latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-
-<h2>Blog posts</h2>
-
-{% set postslist = collections.posts | head(-1 *
-numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-
-{% set morePosts = postsCount - numberOfLatestPostsToShow %} {% if
-morePosts > 0 %} <p>{{ morePosts }} more post{% if morePosts != 1
-%}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-{% endif %}
 
 <h2>Publications and academic writing</h2>
 
@@ -95,12 +87,34 @@ morePosts > 0 %} <p>{{ morePosts }} more post{% if morePosts != 1
 
 </ul>
 
+<h2>Academic appointments</h2>
+
+<ul>
+    <li>2023-2024 >> <a href="https://www.leuphana.de/en/research-centers/lias/fellows/daniel-nemenyi.html">Research Fellow, Leuphana Institute of Advanced Studies</a></li>
+    <li>2022-2023 >> Postdoctoral Research Assistant in Philosophy: <a href="https://latoupiefolle.org/about">The Pragmatic Genealogy of Concepts, <em>La toupie folle</em> [The Mad Spinning Top]</a>: The Pragmatic Genealogy of Concepts, King's College London. Built a custom <em><a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a></em> website tool.</li>
+    <li>2022 >> Lecturer in Ethics, University of Greenwich</li>
+    <li>2022-2023 >> Tutor in Philosophy at the Mary Ward Centre, London</li>
+    <li>2019-2021 >> Lecturer in Big Data Methodologies and Technologies Education at the Department of Digital Humanities, King’s College London.</li>
+    <li>2014-2019 >> <a href="http://www.techne.ac.uk/">Techne AHRC</a> funded PhD in Philosophy to work on my project, 'What is the Internet? An Ontological Investigation', <a href="https://www.kingston.ac.uk/faculties/kingston-school-of-art/research-and-innovation/crmep/">Centre for Research in Modern European Philosophy</a>, Kingston University. 'The final title was What is an internet? Norbert Wiener and the society of control'</li>
+</ul>
+
+
 <h2>Projects</h2>
 <ul>
-    <li><a href="https://www.radicalphilosophy.com"><em>Radical Philosophy</em></a>, member of Editorial Collective</li>
-    <li><a href="https://latoupiefolle.org/">La toupie folle : The Pragmatic Genealogy of Concepts</a>, Research Assistant. Built a custom <em><a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a></em> website tool.</li>
+    <li><a href="https://www.radicalphilosophy.com"><em>Radical Philosophy</em></a>, member of Editorial Collective.</li>
     <li><a href="https://okey.kompyuter.net/">Okey_Kompyuter</a>. Developing Yiddish tech.</li>
 </ul>
+
+<h2>Blog posts</h2>
+
+{% set postslist = collections.posts | head(-1 *
+    numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %} {% if
+							     morePosts > 0 %} <p>{{ morePosts }} more post{% if morePosts != 1
+													  %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+{% endif %}
 
 <h2>Talks</h2>
 
