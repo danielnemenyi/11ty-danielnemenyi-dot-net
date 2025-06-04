@@ -21,21 +21,6 @@
     --syntax-tab-size: 2;
 }
 
--@media (prefers-color-scheme: light) {
-    :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
-
-	--background-color: #fff;
-
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
-    }
-}
-
 /* Global stylesheet */
 * {
 	box-sizing: border-box;
